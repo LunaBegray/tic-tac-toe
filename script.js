@@ -1,6 +1,8 @@
 //object to store the game board
 const gameBoard = (function(){
-    let boardArr = [1,2];
+    let boardArr = ["x","o","o"
+                    ,"x", "o","x"
+                    ,"o","x","o"];
     return {boardArr: boardArr};
 })();
 console.log(gameBoard.boardArr);
@@ -8,3 +10,8 @@ console.log(gameBoard.boardArr);
 const Player = function (name, side){
     return {name, side}
 }
+//takes boardArr and renders it into html
+//allows player to place marks, not allows to place marks if there is already a mark.
+//check if anyone won
+//clear/restart button 
+//congratulation message to the winnner

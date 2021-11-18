@@ -144,7 +144,7 @@ console.log(checkIfWon.whoWon);
 //clear/restart button
 const restartBtn = document.querySelector(".restartBtn");
 restartBtn.addEventListener('click', function(){
-    checkIfWon.whoWon = undefined;
+    checkIfWon.whoWon = null;
     for(i = 0; i < sqArr; i++){
         sqArr[i].textContent = "";
     }

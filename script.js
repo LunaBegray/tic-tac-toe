@@ -138,7 +138,7 @@ const checkIfWon = (function(){
             whoWon = player2o;
         }
     }
-    console.log(checkIfWon.whoWon);
+    console.log(whoWon);
     return {whoWon: whoWon};
 })();
 //clear/restart button

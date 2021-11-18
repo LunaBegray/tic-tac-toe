@@ -46,7 +46,7 @@ console.log(Turns.whoseTurn)
 //takes boardArr and renders it into html
 const Render = (function(){
     for(i = 0; i < gameBoard.boardArr.length; i++){
-        boardArr[i] = sqArr[i].textContent;
+        gameBoard.boardArr[i] = sqArr[i].textContent;
     }
 })();
 //allows player to place marks, not allows to place marks if there is already a mark.

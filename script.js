@@ -33,7 +33,7 @@ const Turns = (function(){
     let whoseTurn;
     let player1x;
     let player2o;
-    if(Number.isIntegar(dividedCount) == true){
+    if(Number.isInteger(dividedCount) == true){
         console.log("player1x chosen");
         whoseTurn = player1x;
     } else{

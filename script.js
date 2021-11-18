@@ -52,7 +52,7 @@ const Render = function(){
 //allows player to place marks, not allows to place marks if there is already a mark.
 for(i = 0; i < sqArr; i++){
     sqArr[i].addEventListener('click',function(){
-        console.log("clicked")
+        console.log("clicked div")
         let currentTurn = Turns.whoseTurn;
         if(currentTurn == player1x && sqArr[i].textContent == ""){
             sqArr[i].textContent = "x";
@@ -60,10 +60,10 @@ for(i = 0; i < sqArr; i++){
             sqArr[i].textContent = "o";
         }
         Render();
-        /* checkIfWon();
+        checkIfWon();
         if(checkIfWon.whoWon != null){
             congMess(checkIfWon.whoWon);
-        } */
+        }
     });
 }  
 //check if anyone won
@@ -140,7 +140,7 @@ const checkIfWon = (function(){
     }
     console.log(checkIfWon.whoWon);
     return {whoWon: whoWon};
-});
+})();
 //clear/restart button
 const restartBtn = document.querySelector(".restartBtn");
 restartBtn.addEventListener('click', function(){

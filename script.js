@@ -60,7 +60,7 @@ for(i = 0; i < sqArr; i++){
         }
         Render();
         checkIfWon();
-        if(checkIfWon.whoWon != undefined){
+        if(checkIfWon.whoWon != null){
             congMess(checkIfWon.whoWon);
         }
     });

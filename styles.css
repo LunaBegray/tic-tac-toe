@@ -5,12 +5,15 @@ body{
     background-color:lightgreen;
 }
 .alsq{
-    margin-top:300px;
     background-color:white;
     width:120px;
     height:120px;
+    border: solid 2px black;
+    display:inline-block;
+    position:relative;
 }
 .gameBoard{
+    position:relative;
     display:flex;
     width:360px;
     height:360px;

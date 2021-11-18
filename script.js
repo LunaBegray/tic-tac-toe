@@ -10,6 +10,10 @@ console.log(gameBoard.boardArr);
 const Player = function (name, side){
     return {name, side}
 }
+//count turns to find which player's turn it is.
+const countTurns = function(){
+
+}
 //takes boardArr and renders it into html
 //allows player to place marks, not allows to place marks if there is already a mark.
 //check if anyone won

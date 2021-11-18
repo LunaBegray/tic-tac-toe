@@ -21,8 +21,10 @@ const Player = function (name, side){
     return {name, side}
 }
 //count turns to find which player's turn it is.
+
 const Turns = (function(){
-    if(count == undefined){
+    let count;
+    if(count == null){
         let count = 2;
     } else {
         count += 1;

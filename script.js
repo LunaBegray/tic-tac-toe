@@ -42,7 +42,6 @@ const Turns = (function(){
     }
     return {whoseTurn: whoseTurn};
 })();
-console.log(Turns.whoseTurn)
 //takes boardArr and renders it into html
 const Render = function(){
     for(i = 0; i < gameBoard.boardArr.length; i++){

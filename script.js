@@ -9,12 +9,12 @@ const sq8 = document.querySelector(".sq8");
 const sq9 = document.querySelector(".sq9");
 sqArr = [sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9];
 //object to store the game board
-const gameBoard = function(){
+const gameBoard = (function(){
     let boardArr = ["","","",
-                    "", "","",
+                    "","","",
                     "","",""];
     return {boardArr};
-};
+})();
 console.log(gameBoard.boardArr);
 //factory function for creating players
 const Player = function (name, side){
@@ -45,7 +45,7 @@ const Turns = (function(){
 console.log(Turns.whoseTurn)
 //takes boardArr and renders it into html
 const Render = (function(){
-    for(i = 0; i < boardArr.length; i++){
+    for(i = 0; i < gameBoard.boardArr.length; i++){
         boardArr[i] = sqArr[i].textContent;
     }
 })();

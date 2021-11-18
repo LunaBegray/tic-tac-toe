@@ -151,7 +151,7 @@ const congMess = function(whoWon){
 //allows player to place marks, not allows to place marks if there is already a mark.
 for(i = 0; i < sqArr; i++){
     sqArr[i].addEventListener('click',function(){
-        console.log("clicked button")
+        console.log("clicked button");
         let currentTurn = Turns.whoseTurn;
         if(currentTurn == player1x && sqArr[i].textContent == ""){
             sqArr[i].textContent = "x";
@@ -163,6 +163,7 @@ for(i = 0; i < sqArr; i++){
         if(checkIfWon.whoWon != null){
             congMess(checkIfWon.whoWon);
         }
+        console.log(gameBoard.boardArr);
     });
 }  
 //factory function for creating players

@@ -31,8 +31,8 @@ const Turns = (function(){
     }
     let dividedCount = count/2
     let whoseTurn;
-    let player1x;
-    let player2o;
+    let player1x = 1;
+    let player2o = 2;
     if(Number.isInteger(dividedCount) == true){
         console.log("player1x chosen");
         whoseTurn = player1x;
@@ -42,6 +42,7 @@ const Turns = (function(){
     }
     return {whoseTurn: whoseTurn};
 })();
+console.log(Turns.whoseTurn);
 //takes boardArr and renders it into html
 const Render = function(){
     for(i = 0; i < gameBoard.boardArr.length; i++){

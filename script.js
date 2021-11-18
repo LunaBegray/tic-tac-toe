@@ -16,12 +16,8 @@ const gameBoard = (function(){
     return {boardArr};
 })();
 console.log(gameBoard.boardArr);
-//factory function for creating players
-const Player = function (name, side){
-    return {name, side}
-}
-//count turns to find which player's turn it is.
 
+//count turns to find which player's turn it is.
 const Turns = (function(){
     let count;
     if(count == null){
@@ -48,6 +44,7 @@ const Render = function(){
     for(i = 0; i < gameBoard.boardArr.length; i++){
         gameBoard.boardArr[i] = sqArr[i].textContent;
     }
+    return gameBoard.boardArr
 };
 
 //check if anyone won
@@ -168,3 +165,7 @@ for(i = 0; i < sqArr; i++){
         }
     });
 }  
+//factory function for creating players
+const Player = function (name, side){
+    return {name, side}
+}

@@ -138,6 +138,7 @@ restartBtn.addEventListener('click', function(){
         sqArr[i].textContent = "";
     }
     boardArr = ["","","","","","","","",""]
+    let divMess = document.querySelector(".divMess");
     divMess.remove();
 });
 //congratulation message to the winnner

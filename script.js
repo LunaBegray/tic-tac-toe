@@ -27,14 +27,16 @@ const gameBoard = (function(){
 console.log(gameBoard.boardArr);
 
 //count turns to find which player's turn it is.
-const Turns = (function(){
+const Turns = function(){
     let count;
     if(count == null){
-        let count = 1;
+        count = 2;
     } else {
         count += 1;
     }
+    console.log(count + " count");
     let dividedCount = count/2
+    console.log(dividedCount + " dividedCount");
     let whoseTurn;
     let player1x = 1;
     let player2o = 2;
@@ -45,8 +47,8 @@ const Turns = (function(){
         console.log("player2o chosen");
         whoseTurn = player2o;
     }
-    return {whoseTurn: whoseTurn};
-})();
+    return whoseTurn
+};
 console.log(Turns.whoseTurn);
 //takes boardArr and renders it into html
 const Render = function(){
@@ -57,7 +59,7 @@ const Render = function(){
 };
 
 //check if anyone won
-const checkIfWon = (function(){
+const checkIfWon = function(){
     let whoWon;
     let player1x = 1;
     let player2o = 2;
@@ -130,12 +132,12 @@ const checkIfWon = (function(){
     }
     console.log(whoWon);
     return {whoWon: whoWon};
-})();
+};
 //clear/restart button
 const restartBtn = document.querySelector(".restartBtn");
 restartBtn.addEventListener('click', function(){
     checkIfWon.whoWon = null;
-    for(i = 0; i < sqArr.length; i++){
+    for(i = 0; i < sqArr; i++){
         sqArr[i].textContent = "";
     }
     boardArr = ["","","","","","","","",""]
@@ -146,7 +148,7 @@ const congMess = function(whoWon){
     let messageO = "congrats player 2 with o! you won!";
     let messageX = "congrats player 1 with X! you won!";
     let messageF;
-    if(checkIfWon.whoWon == 1){
+    if(whoWon == player1x){
         let messageF = messageX;
     } else {
         let messageF = messageO;
@@ -161,7 +163,8 @@ const congMess = function(whoWon){
 for(let i = 0; i < sqArr.length; i++){
     sqArr[i].addEventListener('click',function(){
         console.log("clicked button");
-        let currentTurn = Turns.whoseTurn;
+        let currentTurn = Turns();
+        console.log(currentTurn + "CURRENTURN")
         if(currentTurn == 1 && sqArr[i].textContent == ""){
             sqArr[i].textContent = "x";
         } else if(sqArr[i].textContent == ""){
@@ -169,7 +172,7 @@ for(let i = 0; i < sqArr.length; i++){
         }
         Render();
         checkIfWon.whoWon;
-        console.log(checkIfWon.whoWon)
+        console.log(checkIfWon.whoWon);
         if(checkIfWon.whoWon != null){
             congMess(checkIfWon.whoWon);
         }

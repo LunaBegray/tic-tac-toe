@@ -35,7 +35,6 @@ const Turns = function(){
     }
     console.log(count + " count");
     let dividedCount = count/2
-    console.log(dividedCount + " dividedCount");
     let whoseTurn;
     let player1x = 1;
     let player2o = 2;
@@ -48,7 +47,6 @@ const Turns = function(){
     }
     return whoseTurn
 };
-console.log(Turns.whoseTurn);
 //takes boardArr and renders it into html
 const Render = function(){
     for(i = 0; i < gameBoard.boardArr.length; i++){
@@ -163,7 +161,6 @@ for(let i = 0; i < sqArr.length; i++){
     sqArr[i].addEventListener('click',function(){
         console.log("clicked button");
         let currentTurn = Turns();
-        console.log(currentTurn + "CURRENTURN")
         if(currentTurn == 1 && sqArr[i].textContent == ""){
             sqArr[i].textContent = "x";
         } else if(sqArr[i].textContent == ""){

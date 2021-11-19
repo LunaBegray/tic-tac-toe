@@ -164,7 +164,7 @@ for(i = 0; i < sqArr.length; i++){
         let currentTurn = Turns.whoseTurn;
         if(currentTurn == 1 && sqArr[i].textContent == ""){
             sqArr[i].textContent = "x";
-        } else if(sqArr[i].textContent == "") {
+        } else if(sqArr[i].textContent == ""){
             sqArr[i].textContent = "o";
         }
         Render();

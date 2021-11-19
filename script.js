@@ -153,7 +153,7 @@ for(i = 0; i < sqArr.length; i++){
     sqArr[i].addEventListener('click',function(){
         console.log("clicked button");
         let currentTurn = Turns.whoseTurn;
-        if(currentTurn == player1x && sqArr[i].textContent == ""){
+        if(currentTurn == 1 && sqArr[i].textContent == ""){
             sqArr[i].textContent = "x";
         } else if(sqArr[i].textContent == "") {
             sqArr[i].textContent = "o";

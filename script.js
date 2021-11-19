@@ -8,6 +8,15 @@ const sq7 = document.querySelector(".sq7");
 const sq8 = document.querySelector(".sq8");
 const sq9 = document.querySelector(".sq9");
 sqArr = [sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9];
+sq1.textContent = "";
+sq2.textContent = "";
+sq3.textContent = "";
+sq4.textContent = "";
+sq5.textContent = "";
+sq6.textContent = "";
+sq7.textContent = "";
+sq8.textContent = "";
+sq9.textContent = "";
 //object to store the game board
 const gameBoard = (function(){
     let boardArr = ["","","",

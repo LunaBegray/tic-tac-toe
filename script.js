@@ -147,9 +147,9 @@ const congMess = function(winner){
     let messageX = "congrats player 1 with X! you won!";
     let messageF;
     if(winner == 1){
-        let messageF = messageX;
+        messageF = messageX;
     } else {
-        let messageF = messageO;
+        messageF = messageO;
     }
     console.log(messageF + "MESSAGE");
     const divMess = document.createElement("div");

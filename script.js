@@ -146,7 +146,7 @@ const congMess = function(whoWon){
     let messageO = "congrats player 2 with o! you won!";
     let messageX = "congrats player 1 with X! you won!";
     let messageF;
-    if(whoWon == player1x){
+    if(checkIfWon.whoWon == 1){
         let messageF = messageX;
     } else {
         let messageF = messageO;
@@ -168,7 +168,8 @@ for(let i = 0; i < sqArr.length; i++){
             sqArr[i].textContent = "o";
         }
         Render();
-        checkIfWon();
+        checkIfWon.whoWon;
+        console.log(checkIfWon.whoWon)
         if(checkIfWon.whoWon != null){
             congMess(checkIfWon.whoWon);
         }

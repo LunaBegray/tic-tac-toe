@@ -135,7 +135,7 @@ const checkIfWon = (function(){
 const restartBtn = document.querySelector(".restartBtn");
 restartBtn.addEventListener('click', function(){
     checkIfWon.whoWon = null;
-    for(i = 0; i < sqArr; i++){
+    for(i = 0; i < sqArr.length; i++){
         sqArr[i].textContent = "";
     }
     boardArr = ["","","","","","","","",""]

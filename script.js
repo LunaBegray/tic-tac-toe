@@ -142,16 +142,16 @@ restartBtn.addEventListener('click', function(){
 });
 //congratulation message to the winnner
 const body = document.querySelector("body");
-const congMess = function(whoWon){
+const congMess = function(winner){
     let messageO = "congrats player 2 with o! you won!";
     let messageX = "congrats player 1 with X! you won!";
     let messageF;
-    if(whoWon == 1){
+    if(winner == 1){
         let messageF = messageX;
     } else {
         let messageF = messageO;
     }
-    console.log(messageF);
+    console.log(messageF + "MESSAGE");
     const divMess = document.createElement("div");
     divMess.textContent = messageF;
     divMess.classList.add("divMess");

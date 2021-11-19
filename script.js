@@ -141,6 +141,7 @@ restartBtn.addEventListener('click', function(){
     divMess.remove();
 });
 //congratulation message to the winnner
+const body = document.querySelector("body");
 const congMess = function(whoWon){
     let messageO = "congrats player 2 with o! you won!";
     let messageX = "congrats player 1 with X! you won!";

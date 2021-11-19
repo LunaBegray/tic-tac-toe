@@ -60,6 +60,7 @@ const checkIfWon = function(){
     let whoWon;
     let player1x = 1;
     let player2o = 2;
+    let tie = 3;
     //check if won from left to right section
     if(sq1.textContent == "x" && sq2.textContent == "x" && sq3.textContent == "x" ||
     sq1.textContent == "o" && sq2.textContent == "o" && sq3.textContent == "o"){
@@ -127,6 +128,12 @@ const checkIfWon = function(){
             whoWon = player2o;
         }
     }
+    if((sq1.textContent == "x" || sq1.textContent == "o") && (sq2.textContent == "x" || sq2.textContent == "o") && (sq3.textContent == "x" || sq3.textContent == "o")
+    && (sq4.textContent == "x" || sq4.textContent == "o") && (sq5.textContent == "x" || sq5.textContent == "o") && (sq6.textContent == "x" || sq6.textContent == "o")
+    && (sq7.textContent == "x" || sq7.textContent == "o") && (sq8.textContent == "x" || sq8.textContent == "o") && (sq9.textContent == "x" || sq9.textContent == "o")
+    && whoWon != player1x && whoWon != player2o){
+        whoWon = tie;
+    }
     console.log(whoWon);
     return whoWon
 };
@@ -146,11 +153,14 @@ const body = document.querySelector("body");
 const congMess = function(winner){
     let messageO = "congrats player 2 with o! you won!";
     let messageX = "congrats player 1 with X! you won!";
+    let messageT = "It is a tie!"
     let messageF;
     if(winner == 1){
         messageF = messageX;
-    } else {
+    } else if(winner == 2){
         messageF = messageO;
+    } else{
+        messageF = messageT;
     }
     console.log(messageF + "MESSAGE");
     const divMess = document.createElement("div");
@@ -177,7 +187,7 @@ for(let i = 0; i < sqArr.length; i++){
         console.log(gameBoard.boardArr);
     });
 }  
-  
+ 
 //factory function for creating players
 const Player = function (name, side){
     return {name, side}

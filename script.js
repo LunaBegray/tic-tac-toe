@@ -25,10 +25,9 @@ const gameBoard = (function(){
     return {boardArr};
 })();
 console.log(gameBoard.boardArr);
-
+let count;
 //count turns to find which player's turn it is.
 const Turns = function(){
-    let count;
     if(count == null){
         count = 2;
     } else {
